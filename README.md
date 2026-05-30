@@ -13,7 +13,7 @@ The platform includes separate modules for users and admins, allowing customers 
 * User registration and login authentication
 * JWT-based secure authentication and authorization
 * Browse jewellery products with category filtering
-* Product search and sorting functionality
+* Product sorting functionality
 * Add to cart and wishlist functionality
 * Secure checkout and payment integration
 * Responsive UI for desktop and mobile devices
