@@ -67,16 +67,6 @@ router.get('/', async (req, res) => {
 
     const products = await PRODUCT.find(query).skip((page - 1) * limit).limit(Number(limit))
 
-    // let products;
-    // if (category) {
-    //     products = await PRODUCT.find({ category: category }).skip((page-1)*limit).limit(limit);
-    // }else if(metal){
-    //     products = await PRODUCT.find({ brand: metal }).skip((page-1)*limit).limit(limit);
-    // }
-    //  else {
-    //     products = await PRODUCT.find().skip((page-1)*limit).limit(limit);
-    // }
-    // const products = await PRODUCT.find({})
     if (!products) {
       return res.json({ success: true, message: "No products available" })
     }
