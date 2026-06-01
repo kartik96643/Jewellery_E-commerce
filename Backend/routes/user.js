@@ -47,7 +47,7 @@ router.post('/signin', async (req, res) => {
 
         res.cookie('token', token, {
             httpOnly: true,
-            secure: false,    // true in production
+            secure: false,    
             sameSite: "lax",
             path: "/",
         });
@@ -57,7 +57,7 @@ router.post('/signin', async (req, res) => {
             email: user.email,
             role: user.role,
         };
-        // console.log(req.user, "userwP")
+        
 
         return res.status(200).json({ success: true, message: "Logged In ", userWithoutPass, token });
     } catch (error) {
