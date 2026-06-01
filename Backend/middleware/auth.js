@@ -4,7 +4,7 @@ function checkToken() {
   return async (req, res, next) => {
     const token = req.cookies.token; // ✅ fixed key
 
-    console.log("Cookies:", req.cookies);
+    // console.log("Cookies:", req.cookies);
 
     if (!token) {
       req.user = null;
@@ -19,7 +19,7 @@ function checkToken() {
       req.user = null;
     }
 
-    console.log("User:", req.user);
+    // console.log("User:", req.user);
 
     next();
   };
@@ -27,7 +27,7 @@ function checkToken() {
 
 function restrictTo(roles){
     return function(req,res, next){
-        console.log(req.user)
+        // console.log(req.user)
         if(!req.user){
             return res.json({message:"Please Log In"})
         }
